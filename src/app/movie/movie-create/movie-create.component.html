@@ -1,0 +1,25 @@
+<form [formGroup]="movieCreateForm" (ngSubmit)="addMovie()">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="floatingTitle" placeholder="Titolo" formControlName="title">
+    <label for="floatingTitle">Titolo</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="floatingYear" placeholder="Anno" formControlName="year">
+    <label for="floatingYear">Anno</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input type="number" class="form-control" id="floatingRuntime" placeholder="Durata" formControlName="runtime">
+    <label for="floatingRuntime">Durata</label>
+  </div>
+  <div class="form-floating mb-3">
+    <select class="form-control" id="floatingGenre" placeholder="" formControlName="genre">
+      <option *ngFor="let genre of genres" [value]="genre">{{genre.name}}</option>
+    </select>
+    <label for="floatingGenre">Genere</label>
+  </div>
+
+  <div class="text-center">
+    <button class="btn btn-primary" type="submit" [disabled]="!movieCreateForm.valid">Aggiungi</button>
+  </div>
+
+</form>
