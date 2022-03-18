@@ -1,8 +1,9 @@
 import { Genre } from "./Genre";
 
 export interface Movie {
-  title: String,
-  year: Number,
-  runtime: Number,
+  _id?: string,
+  title: string,
+  year: number,
+  runtime: number,
   genres: Genre
 }

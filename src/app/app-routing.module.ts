@@ -4,6 +4,7 @@ import { HomeComponent } from './dashboard/home/home.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  { path: 'movie', loadChildren: () => import('./movie/movie.module').then(m => m.MovieModule) },
   {path: '**', redirectTo: ''}
 ];
 

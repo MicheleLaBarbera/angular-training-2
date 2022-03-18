@@ -1,5 +1,5 @@
 export interface Genre {
-  name: String
+  name: string
 }
 
 
